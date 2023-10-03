@@ -2,7 +2,9 @@ import React from 'react'
 
 function NoteInput() {
   return (
-    <div>NoteInput</div>
+    <div className={"textarea-box"}>
+      <textarea className='textarea-input' placeholder='Start writing...'/>
+    </div>
   )
 }
 
