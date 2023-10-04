@@ -71,15 +71,21 @@
 }
 
 .btn-add {
-  background-color: #10a504;
+  background-color: #FFB4A2;
   border: none;
+  color: #6D6875;
   outline: none;
   padding: 10px 12px;
   width: 100px;
   border-radius: 15px;
   cursor: pointer;
-  color: #fff;
   font-size: 14px;
+  transition-duration: 0.4s;
+}
+
+.btn-add:hover {
+  background-color: #FFCDB2;
+  color: white;
 }
 
 .btn {
@@ -93,28 +99,28 @@
 }
 
 .btn-active {
-  border-top: 20px solid #f58c02;
+  border-top: 20px solid #FFCDB2;
   opacity: 1;
 }
 
 .btn-red {
-  background-color: #de2053;
+  background-color: #FFB4A2;
 }
 
 .btn-blue {
-  background-color: #0635f1;
+  background-color: #6F0F0F;
 }
 
 .btn-green {
-  background-color: #65fa00;
+  background-color: #B5838D;
 }
 
 .btn-purple {
-  background-color: #ff00cc;
+  background-color: #FF00EE;
 }
 
 .btn-black {
-  background-color: #000000;
+  background-color: #6D6875;
 }
 
 .note-container {

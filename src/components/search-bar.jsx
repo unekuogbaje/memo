@@ -1,14 +1,24 @@
-import React from 'react'
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { setSearchText } from "../redux/notes/notesSlice";
 
-function SearchBar() {
+const Search = () => {
+  const dispatch = useDispatch();
+  const searchValue = useSelector((state) => state.searchText);
+  const handleChangeText = (e) => {
+    const text = e.target.value;
+    dispatch(setSearchText(text));
+  };
   return (
     <div>
       <input
-      type='text'
-      placeholder='Search here'
-      className='search-box'/>
+        value={searchValue}
+        onChange={handleChangeText}
+        type="text"
+        placeholder={"Search..."}
+        className={"search-box"}
+      />
     </div>
-  )
-}
-
-export default SearchBar;
+  );
+};
+export default Search;

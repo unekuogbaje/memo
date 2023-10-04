@@ -1,9 +1,24 @@
-import React from 'react'
+import React from "react";
+import NoteItem from "./note-item";
+import { useSelector } from "react-redux";
 
-function Content() {
+const Content = () => {
+  let items = useSelector((state) => state.items);
+  let filteredNotes = items;
+  const searchText = useSelector((state) => state.searchText);
+
+  if (searchText && searchText !== "") {
+    filteredNotes = filteredNotes.filter((note) =>
+      note.note.toLowerCase().includes(searchText.toLowerCase())
+    );
+  } else {
+    filteredNotes = items;
+  }
+
   return (
-    <div>Content</div>
-  )
-}
-
+    <div>
+      <NoteItem focus={items.length > 0} items={filteredNotes} />
+    </div>
+  );
+};
 export default Content;
